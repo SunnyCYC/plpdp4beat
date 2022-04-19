@@ -83,21 +83,21 @@ class song_info():
 
 def main():
     ### paths for test songs
-    songs = glob.glob(os.path.join('./', 'test_songs', '*.wav'))
+    songs = glob.glob(os.path.join('./', 'test_recordings', '*.wav'))
     ### types of Post-processing trackers to use
     post_types = ['SPPK', 'DP', 'PLPDP-sk', 'PLPDP', 'HMM', 'HMMT0']
     ### generate beat estimations and other information for each test song
     songinfo_list = []
     for eachsong in songs[:1]:
-        song_info_temp = song_info(eachsong, post_types, './test_songs')
+        song_info_temp = song_info(eachsong, post_types, './test_recordings')
         songinfo_list.append(song_info_temp)
     
     ### save qualitative plots and beat estimations
-    fig_out_dir = os.path.join('./', 'test_songs', 'qualitative_plots')
+    fig_out_dir = os.path.join('./', 'test_recordings', 'qualitative_plots')
     if not os.path.exists(fig_out_dir):
         Path(fig_out_dir).mkdir(parents = True, exist_ok = True)
         
-    est_out_dir = os.path.join('./test_songs', 'estimated_beats', )
+    est_out_dir = os.path.join('./test_recordings', 'estimated_beats', )
     if not os.path.exists(est_out_dir):
         Path(est_out_dir).mkdir(parents =True, exist_ok = True)
     
