@@ -1,7 +1,7 @@
 # Predominant Local Pulse-based Dynamic Programming Beat Tracker
 
 This is the repo for the paper titled
-"*Local Temporal Expectation-based Beat Tracking for Expressive Classical Music*".
+"*Local Temporal Expectation-based Beat Tracking for Expressive Classical Piano Music*".
 
 [ **| Paper |** ](https://)[ **Demo** ](https://sunnycyc.github.io/plpdp4beat-demo/)[ **| Code |** ](https://github.com/SunnyCYC/plpdp4beat/)
 
