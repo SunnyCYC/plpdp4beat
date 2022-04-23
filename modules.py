@@ -46,7 +46,7 @@ def compute_plps_norm(X, Fs, L, N, H, Theta, plp_num = 3):
     nov_PLPs = np.zeros(( plp_num, L_pad), dtype = np.float64)
     multi_tempo_list = []
     for n in range(M):
-        ## get the largest tempos
+        ## get the predominant tempos
         ### deal with zero input:
         if not tempogram[:, n].sum() ==0:   
             rank = np.argsort(-tempogram[:, n])
