@@ -26,7 +26,7 @@ We can see that despite that HMMs with lambda $=5-25$ indeed perform better than
 ![](https://i.imgur.com/wkhuCog.png)
 
 On the other hand, the Figure below shows the Grid search results of synthetic datasets using different tempo transition lambdas. It can be seen that in synthetic experiments, for both ASAP and Maz-5, lambda $=5$ works the best. As the value of lambda increases, the performance of HMM for both datasets decreases monotonically in different slopes.
-![link text](https://i.imgur.com/yhkE3cV.png)
+![](https://i.imgur.com/yhkE3cV.png)
 
 We summarize the main ideas as follows:
 * The results of Figures 3 and 4 reveal the remarkable influence of the tempo transition lambda on the performance of HMM for expressive music. They also validate PLPDP’s superiority over HMMs in both datasets when using real activation functions.
