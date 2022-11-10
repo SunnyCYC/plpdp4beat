@@ -24,12 +24,11 @@ Finally, as illustrated in our paper Section III-B, despite that $\kappa=1$ does
 Grid search experiments are conducted to investigate the performance of HMM using tempo transition lambda from 0--100 with a step size of five. The following figure shows the result for real datasets. The results of PLPDP are also plotted as horizontal dashed lines for comparison. 
 
 We can see that despite that HMMs with lambda $=5-25$ indeed perform better than HMMT0, the best HMMs still perform worse than PLPDP in both datasets. We can also see that though both datasets are "expressive classical music", the preferred lambdas are very different (i.e., Maz-5: lambda=5, ASAP: lambda = 90), indicating the dramatic difference between expressive musical pieces.
-![image](https://user-images.githubusercontent.com/60595988/201060473-8a15490c-8b95-4ee7-9982-1e0063a7c988.png)
+<img src="https://user-images.githubusercontent.com/60595988/201060473-8a15490c-8b95-4ee7-9982-1e0063a7c988.png" alt="Cover" width="50%"/>
 
 
 On the other hand, the Figure below shows the Grid search results of synthetic datasets using different tempo transition lambdas. It can be seen that in synthetic experiments, for both ASAP and Maz-5, lambda $=5$ works the best. As the value of lambda increases, the performance of HMM for both datasets decreases monotonically in different slopes.
-![image](https://user-images.githubusercontent.com/60595988/201060529-aa79d49e-2a51-4d7e-af02-a900de4f026f.png)
-
+<img src="https://user-images.githubusercontent.com/60595988/201060529-aa79d49e-2a51-4d7e-af02-a900de4f026f.png" alt="Cover" width="50%"/>
 
 We summarize the main ideas as follows:
 * The results of Figures 3 and 4 reveal the remarkable influence of the tempo transition lambda on the performance of HMM for expressive music. They also validate PLPDP’s superiority over HMMs in both datasets when using real activation functions.
