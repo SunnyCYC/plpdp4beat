@@ -16,7 +16,7 @@ In this repo we include one recording from the ASAP dataset [1, 2] as an example
 The following figure shows the beat tracking F1-score of single kernel PLPDP using kernel sizes from 1-20 seconds. The F1-scores of combined kernel PLPDP (i.e., $\kappa=1, 3, 5$ seconds) are also plotted (dashed lines) for comparison. It can be seen that for both ASAP and Maz-5, kernel sizes larger than five seconds do not influence the F1-score much. This could be the results of multiple different factors. For example, longer kernels may perform better in regions with stabler tempo (as they capture more information regarding the local periodicity) but perform worse in regions with larger tempo variations. Moreover, in regions with relatively stable tempo, using kernel size of five or 15 seconds may not make big difference. However, it would be difficult to analyze the relation between suitable kernel size and distributions of stable/unstable regions in datasets. Therefore, we empirically consider kernel sizes smaller than five seconds. On the other hand, it can also be seen that while $\kappa=1$ performs the worst for both datasets, Maz-5 prefers $\kappa=3$ and ASAP prefers $\kappa \geq 5$. This is mainly because the detection of local periodicity requires the kernels to cover an appropriate number of peaks. When the kernel is small (e.g., one second), it is hard to detect and periodicity in regions with slower tempo. Besides, musical pieces in Maz-5 (mean tempo 125 BPM) are generally faster than ASAP (mean tempo 107 BPM), which explains why $\kappa=2, 3$ can be preferred in Maz-5 rather than in ASAP. 
 
 Finally, as illustrated in our paper Section III-B, despite that $\kappa=1$ does not perform well independently, it is quite useful to reduce artifacts. We therefore empirically adopt the combination of $\kappa=1, 3, 5$ seconds without further investigating other combinations.
-![](https://i.imgur.com/TDD4e99.png)
+![image](https://user-images.githubusercontent.com/60595988/201060398-86795634-6e21-4de8-b711-076d7816f460.png)
 
 
 
@@ -24,11 +24,11 @@ Finally, as illustrated in our paper Section III-B, despite that $\kappa=1$ does
 Grid search experiments are conducted to investigate the performance of HMM using tempo transition lambda from 0--100 with a step size of five. The following figure shows the result for real datasets. The results of PLPDP are also plotted as horizontal dashed lines for comparison. 
 
 We can see that despite that HMMs with lambda $=5-25$ indeed perform better than HMMT0, the best HMMs still perform worse than PLPDP in both datasets. We can also see that though both datasets are "expressive classical music", the preferred lambdas are very different (i.e., Maz-5: lambda=5, ASAP: lambda = 90), indicating the dramatic difference between expressive musical pieces.
-![](https://i.imgur.com/AaIZYJJ.png)
+![image](https://user-images.githubusercontent.com/60595988/201060473-8a15490c-8b95-4ee7-9982-1e0063a7c988.png)
 
 
 On the other hand, the Figure below shows the Grid search results of synthetic datasets using different tempo transition lambdas. It can be seen that in synthetic experiments, for both ASAP and Maz-5, lambda $=5$ works the best. As the value of lambda increases, the performance of HMM for both datasets decreases monotonically in different slopes.
-![](https://i.imgur.com/t0ZhyaT.png)
+![image](https://user-images.githubusercontent.com/60595988/201060529-aa79d49e-2a51-4d7e-af02-a900de4f026f.png)
 
 
 We summarize the main ideas as follows:
