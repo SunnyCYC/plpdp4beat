@@ -45,7 +45,8 @@ As existing conventional evaluation metrics generally assume a fixed relation be
 
 From Table 1, we can see that potential inconsistency between existing conventional metrics. For example, for Maz-5, HMMT0 achieves higher F1-score (0.595) than DP does (0.488), while DP achieves much higher CMLt and AMLt than HMMT0. With ACR, the inconsistency became explainable. As HMMT0 switches between subharmonic tempi (i.e., half, third, quarter), the scores of CMLt and AMLt can only be low. However, due to its high precision, HMMT0 still gets a high F1-score. It can also be observed that none of existing PPTs really learn to correctly determine the local tempo of expressive musical pieces, and different PPTs behave differently based on their assumptions. The ACR results explains the high recall of PLPDP and high precision of HMMs. As PLPDP relies on local periodicity calculated based on local windowed activation peaks, for ASAP dataset with large amount of non-beat activation peaks, PLPDP is prone to detect faster harmonic tempi, which results in high recall and low precision. On the other hand, HMMs tend to tap slower in both datasets, therefore achieve higher precision and lower recall.
 
-![](https://hackmd.io/_uploads/BJKjQo-F2.png)
+![image](https://github.com/SunnyCYC/plpdp4beat/assets/60595988/92693234-f4a9-4fa7-b915-88d20191d9e3)
+
 
 ## Reference
 *[1] F. Foscarin, A. McLeod, P. Rigaux, F. Jacquemard, and M. Sakai,“ASAP: A dataset of aligned scores and performances for piano transcription,” in Proc. Int. Soc. Music Inf. Retr. Conf., 2020, pp. 53.*
