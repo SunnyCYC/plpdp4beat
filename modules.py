@@ -2,6 +2,8 @@
 """
 Created on Wed Apr 13 15:47:52 2022
 
+20230627: add noew plp_int_tl to limit tempo range (theta) when using PLP kernel size of 1 sec
+
 @author: CITI
 """
 #%%
@@ -312,8 +314,48 @@ def plp_int(nov, fps = 100, theta = np.arange(30, 301)):
         An integrated PLP curve.
 
     """
+    ### to ensure plp_k1 at least one completed sinewave in one window, set the min_bpm = 60 bpm
+    if theta[0] <60:    
+        theta_k1 = np.arange(60, theta[-1]+1)
+    else:
+        theta_k1 = theta
     plp_k1 = nov2plp(nov = nov, kernel_size = 1, plp_num = 1, 
+                                        Fs_nov = fps, H = 10, Theta = theta_k1)
+    plp_k3 = nov2plp(nov = nov, kernel_size = 3, plp_num = 1, 
                                         Fs_nov = fps, H = 10, Theta = theta)
+    plp_k5 = nov2plp(nov = nov, kernel_size = 5, plp_num = 1, 
+                                        Fs_nov = fps, H = 10, Theta = theta)
+    plp_int = (plp_k1*plp_k3*plp_k5).squeeze()
+
+    return plp_int
+
+def plp_int_tl(nov, fps = 100, theta = np.arange(30, 301)):
+    """
+    Calculate integrated PLP using kernel sizes of 1, 3, 5 seconds.
+    0627: tempo range limited version for PLP with kernel size of 1 second
+
+    Parameters
+    ----------
+    nov : (np.ndarray)
+        Novelty function such as results of onset detection or network beat activation.
+    fps : float, optional
+        Frame rate of the input novelty function. The default is 100.
+    theta : (np.ndarray), optional
+        Tempo range for tempogram. The default is np.arange(30, 301).
+
+    Returns
+    -------
+    plp_int : (np.ndarray)
+        An integrated PLP curve.
+
+    """
+    ### to ensure plp_k1 at least capture 2 peaks in one window, set the min_bpm = 60 bpm
+    if theta[0] <60:    
+        theta_k1 = np.arange(60, theta[-1]+1)
+    else:
+        theta_k1 = theta
+    plp_k1 = nov2plp(nov = nov, kernel_size = 1, plp_num = 1, 
+                                        Fs_nov = fps, H = 10, Theta = theta_k1)
     plp_k3 = nov2plp(nov = nov, kernel_size = 3, plp_num = 1, 
                                         Fs_nov = fps, H = 10, Theta = theta)
     plp_k5 = nov2plp(nov = nov, kernel_size = 5, plp_num = 1, 
