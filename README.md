@@ -1,4 +1,4 @@
-# Predominant Local Pulse-based Dynamic Programming Beat Tracker
+# Local Periodicity-Based Beat Tracking for Expressive Classical Piano Music
 
 This is the repo for the paper titled
 "*Local Periodicity-Based Beat Tracking for Expressive Classical Piano Music*".
