@@ -1,7 +1,7 @@
 # Local Periodicity-Based Beat Tracking for Expressive Classical Piano Music
 
 This is the repo for the paper titled
-"*Local Periodicity-Based Beat Tracking for Expressive Classical Piano Music*".
+"*Local Periodicity-Based Beat Tracking for Expressive Classical Piano Music*", accepted by IEEE/ACM Transactions on Audio, Speech, and Language Processing.
 
 [ **| Paper |** ](https://)[ **Demo** ](https://sunnycyc.github.io/plpdp4beat-demo/)[ **| Code |** ](https://github.com/SunnyCYC/plpdp4beat/)
 
