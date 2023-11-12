@@ -5,6 +5,18 @@ This is the repo for the paper titled
 
 [ **| Paper |** ](https://arxiv.org/abs/2308.10355)[ **Demo** ](https://sunnycyc.github.io/plpdp4beat-demo/)[ **| Code |** ](https://github.com/SunnyCYC/plpdp4beat/)
 
+
+## Update for Experiment Results *(2023/11/03)
+
+As reported in our ISMIR late-breaking demo paper titled "What Can Go Wrong When Conducting Beat Tracking Experiments" [4], there are underlying technical issues regarding madmom library [3], in combination with the inconsistent audio file formats (i.e., data types and sampling rate)in ASAP dataset [1, 2], which may largerly influence the evaluation results. We update here the results after fixing the technical issues. Note that the differences lie in the real activation experiment part of ASAP. For Maz-5 dataset with a consistent audio file format, all results remain the same. Also note that, the main message of this paper remains the same: Compared to existing commonly adopted HMM-based post-processing trackers (PPTs), PLPDP particularly enhances the recall values at the cost of a lower precision, resulting in an overall improvement of F1-score.
+
+
+Old results:
+![image.png](https://hackmd.io/_uploads/HJJzAFMma.png)
+
+New results:
+![image.png](https://hackmd.io/_uploads/ByOXRYMX6.png)
+
 ## Abstract
 To model the periodicity of beats, state-of-the-art beat tracking systems use “post-processing trackers” (PPTs) that rely on several empirically determined global assumptions for tempo transition, which work well for music with steady tempo. For expressive classical music, however, these assumptions can be too rigid. With two large datasets of Western classical piano music, namely the Aligned Scores and Performances (ASAP) dataset and a dataset of Chopin’s Mazurkas (Maz-5), we report on experiments showing the failure of existing PPTs to cope with local tempo changes, thus calling for new methods. In this paper, we propose a new local periodicity-based PPT, called predomi-nant local pulse-based dynamic programming (PLPDP) tracking, that allows for more flexible tempo transitions. Specifically, the new PPT incorporates a method called “predominant local pulses” (PLP) in combination with a dynamic programming (DP) component to jointly consider the locally detected periodicity and beat activation strength at each time instant. Accordingly, PLPDP accounts for the local periodicity, rather than relying on a global tempo assumption. Compared to existing PPTs, PLPDP particularly enhances the recall values at the cost of a lower precision, resulting in an overall improvement of F1-score for beat tracking in ASAP (from 0.473 to 0.493) and Maz-5 (from 0.595 to 0.838).
 ## Usage
