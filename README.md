@@ -67,5 +67,5 @@ From Table 1, we can see that potential inconsistency between existing conventio
 
 *[3] C. Y. Chiu, M. Müller, M. E. P. Davies, A. W. Y. Su and Y. H. Yang, "An Analysis Method for Metric-Level Switching in Beat Tracking," in IEEE Signal Processing Letters, vol. 29, pp. 2153-2157, 2022.*
 
-*[4] https://github.com/SunnyCYC/b-tracking-issues-lbd/tree/main*
+*[4] https://github.com/SunnyCYC/b-tracking-issues-lbd/*
 
